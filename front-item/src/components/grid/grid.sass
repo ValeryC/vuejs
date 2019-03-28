@@ -1,0 +1,207 @@
+/* GRID */
+$col: 12
+$gutter: 20px
+
+
+/* ****************/
+/* **** MIXINS ****/
+/* ****************/
+@mixin wcol($c)
+  width: calc((100% + #{$gutter}) / #{$col} * #{$c})
+
+@mixin mlcol($c)
+  margin-left: calc((100% + #{$gutter}) / #{$col} * #{$c})
+
+/* ****************/
+/* **** GRID **** */
+/* ****************/
+
+#grid
+  position: absolute
+  left: 0
+  top: 0
+  pointer-events: none
+  z-index: 9999
+  .colored
+    width: 100%
+    height: 100%
+    display: block
+    background-color: rgba(0, 255, 255, 0.25)
+  
+.grid
+  width: 100%
+  height: 100%
+  margin: 0 auto
+  overflow: auto
+  .row:last-child
+    margin-bottom: 4rem
+
+.grid-row
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  height: 100%
+
+.row
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  margin: 0 calc(-#{$gutter} / 2)
+
+.col
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+
+/***************************/
+/* **** MEDIA QUERIES **** */
+/***************************/
+
+$breakpoint: 1200px
+
+@media screen and (min-width: $breakpoint)
+  .grid-l1
+    position: relative
+    width: calc((100% - (#{$col} - 1) * #{$gutter}) / #{$col})
+    margin-right: $gutter
+    height: 100%
+  .grid-l1:last-child
+    margin-right: 0
+
+  .l1
+    @include wcol(1)
+  .l2
+    @include wcol(2)
+  .l3
+    @include wcol(3)
+  .l4
+    @include wcol(4)
+  .l5
+    @include wcol(5)
+  .l6
+    @include wcol(6)
+  .l7
+    @include wcol(7)
+  .l8
+    @include wcol(8)
+  .l9
+    @include wcol(9)
+  .l10
+    @include wcol(10)
+  .l11
+    @include wcol(11)
+  .l12
+    @include wcol(12)
+  .l13
+    @include wcol(13)
+  .l14
+    @include wcol(14)
+  .l15
+    @include wcol(15)
+  .l16
+    @include wcol(16)
+  .offset-l1
+    @include mlcol(1)
+  .offset-l2
+    @include mlcol(2)
+  .offset-l3
+    @include mlcol(3)
+  .offset-l4
+    @include mlcol(4)
+  .offset-l5
+    @include mlcol(5)
+  .offset-l6
+    @include mlcol(6)
+  .offset-l7
+    @include mlcol(7)
+  .offset-l8
+    @include mlcol(8)
+  .offset-l9
+    @include mlcol(9)
+  .offset-l10
+    @include mlcol(10)
+  .offset-l11
+    @include mlcol(11)
+  .offset-l12
+    @include mlcol(12)
+  .offset-l13
+    @include mlcol(13)
+  .offset-l14
+    @include mlcol(14)
+  .offset-l15
+    @include mlcol(15)
+  .offset-l16
+    @include mlcol(16)
+
+@media screen and (max-width: ($breakpoint - 1px))
+  .grid-s1
+    position: relative
+    width: calc((100% - (#{$col} - 1) * #{$gutter}) / #{$col})
+    margin-right: $gutter
+    height: 100%
+  .grid-s1:last-child
+    margin-right: 0
+
+  .s1
+    @include wcol(1)
+  .s2
+    @include wcol(2)
+  .s3
+    @include wcol(3)
+  .s4
+    @include wcol(4)
+  .s5
+    @include wcol(5)
+  .s6
+    @include wcol(6)
+  .s7
+    @include wcol(7)
+  .s8
+    @include wcol(8)
+  .s9
+    @include wcol(9)
+  .s10
+    @include wcol(10)
+  .s11
+    @include wcol(11)
+  .s12
+    @include wcol(12)
+  .s13
+    @include wcol(13)
+  .s14
+    @include wcol(14)
+  .s15
+    @include wcol(15)
+  .s16
+    @include wcol(16)
+  .offset-s1
+    @include mlcol(1)
+  .offset-s2
+    @include mlcol(2)
+  .offset-s3
+    @include mlcol(3)
+  .offset-s4
+    @include mlcol(4)
+  .offset-s5
+    @include mlcol(5)
+  .offset-s6
+    @include mlcol(6)
+  .offset-s7
+    @include mlcol(7)
+  .offset-s8
+    @include mlcol(8)
+  .offset-s9
+    @include mlcol(9)
+  .offset-s10
+    @include mlcol(10)
+  .offset-s11
+    @include mlcol(11)
+  .offset-s12
+    @include mlcol(12)
+  .offset-s13
+    @include mlcol(13)
+  .offset-s14
+    @include mlcol(14)
+  .offset-s15
+    @include mlcol(15)
+  .offset-s16
+    @include mlcol(16)
