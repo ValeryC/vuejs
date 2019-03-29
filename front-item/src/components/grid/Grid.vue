@@ -1,18 +1,7 @@
 <template>
-  <div id="grid" class="grid">
-    <div class="grid-row" v-show="showGrid">
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
-      <div class="grid-s1 grid-l1"><div class="colored"></div></div>
+  <div id="grid" class="grid padding-grid">
+    <div class="grid-row" v-show="showGrid" >
+      <div class="grid-s1 grid-l1" v-for="col_grid in 12"><div class="colored"></div></div>
     </div>
   </div>
 </template>
@@ -35,7 +24,8 @@
     data() {
       return {
         showGrid: false,
-        grid: ""
+        grid: "",
+
       }
     },
     methods: {

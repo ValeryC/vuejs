@@ -1,4 +1,4 @@
-# front-shopping cart
+# geodis
 
 ## Project setup
 ```

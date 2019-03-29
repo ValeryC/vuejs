@@ -1,0 +1,54 @@
+.user-card
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  width: auto
+  border: 2px solid $light_grey
+  border-radius: 4px
+  height: 20rem
+  margin-bottom: 2rem
+  .user-content
+    display: flex
+    flex-direction: column
+    align-items: center
+  .avatar-user
+    margin-bottom: 2rem 
+    border-radius: 50%
+    width: 7rem
+    height: 7rem
+    background-image: url('../../assets/images/avatar_user.svg')
+    background-repeat: no-repeat
+    background-position: center
+  .user-settings
+    margin-top: 1rem
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 1rem
+    top: 0
+    left: 0
+    width: 100%
+    .status
+      width: 1rem
+      height: 1rem
+      border-radius: 50%  
+    .options-container
+      width: 1.6rem
+      height: 1.6rem
+      background-color: $light_grey
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: space-around
+      .options
+        width: 1rem
+        height: 0.2rem
+        background-image: url('../../assets/pictos/more.svg')
+        background-repeat: no-repeat
+        background-position: center
+
+.opacity
+  opacity: 0.5

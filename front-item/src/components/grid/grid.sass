@@ -1,20 +1,33 @@
 /* GRID */
 $col: 12
-$gutter: 20px
-
+$gutter: 16px
 
 /* ****************/
 /* **** MIXINS ****/
 /* ****************/
 @mixin wcol($c)
-  width: calc((100% + #{$gutter}) / #{$col} * #{$c})
+  width: calc(100% / #{$col} * #{$c})
 
 @mixin mlcol($c)
-  margin-left: calc((100% + #{$gutter}) / #{$col} * #{$c})
+  margin-left: calc(100% / #{$col} * #{$c})
 
 /* ****************/
 /* **** GRID **** */
 /* ****************/
+.container-grid
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  padding-left: 54px
+  padding-right: 54px
+  pointer-events: none
+
+.padding-grid
+  padding-left: 54px
+  padding-right: 54px
+  width: 100%
 
 #grid
   position: absolute
@@ -32,31 +45,34 @@ $gutter: 20px
   width: 100%
   height: 100%
   margin: 0 auto
-  overflow: auto
+  overflow-x: hidden
+  overflow-y: auto
   .row:last-child
     margin-bottom: 4rem
 
 .grid-row
   display: flex
   flex-wrap: wrap
-  width: 100%
   height: 100%
+  width: 100%
 
 .row
   display: flex
   flex-wrap: wrap
-  width: 100%
+  width: auto
   margin: 0 calc(-#{$gutter} / 2)
 
 .col
   padding-left: $gutter / 2
   padding-right: $gutter / 2
+  box-sizing: border-box
+
 
 /***************************/
 /* **** MEDIA QUERIES **** */
 /***************************/
 
-$breakpoint: 1200px
+$breakpoint: 1000px
 
 @media screen and (min-width: $breakpoint)
   .grid-l1

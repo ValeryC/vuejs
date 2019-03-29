@@ -1,0 +1,146 @@
+#missions
+  font-size: $ft_small
+  color: $text
+ 
+.container-missions
+  border-bottom: 0.1rem solid $light_grey
+  display: flex
+  height: 5.0rem
+  width: 28.1rem
+  align-items: center
+  //margin-left: -3.1rem
+  
+  
+.missions 
+  display: flex
+  padding-left: 4.0rem
+  
+
+.circle-point
+  display: flex
+  height: 0.8rem
+  width: 0.8rem
+  background-color: $green
+  border-radius: 1.5rem
+  margin-left: 1.5rem
+
+.print-logo
+  display: flex
+  background-image: url('../../assets/pictos/print.svg')
+  height: 1.6rem
+  width: 1.6rem
+  margin-left: 10.4rem
+
+.chevron
+  background-image: url('../../assets/pictos/chevron.svg')
+  width: 0.7rem
+  height: 1.1rem
+  margin-left: 2rem
+
+
+.rotate 
+  -moz-transition: all .25s ease
+  -webkit-transition: all .25s ease
+  transition: all .25s linear
+
+.chevron.rotate.down 
+  -moz-transform: rotate(90deg)
+  -webkit-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+.container-assign
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+li
+  display: flex
+  align-items: center
+  justify-content: space-around
+  border-bottom: 0.1rem $light_grey solid 
+  background: $white 
+  color: $text 
+  //padding-left: 6.1rem
+  height: 3rem
+  width: 28.1rem
+
+.arrow_right
+  display: flex
+  background-image: url('../../assets/pictos/arrow_right.svg')
+  height: 1rem
+  width: 1.153rem
+  background-repeat: no-repeat
+  //margin-left: 4.11rem
+  //margin-right: 4.14rem
+
+.stat_mission
+  padding-top: 1.0rem
+  padding-bottom: 1.9rem
+  border-bottom: 0.1rem solid $light_grey
+
+.stat-text
+  padding-left: 4.0rem
+
+.container-radio
+  padding-top: 1.2rem
+  padding-left: 4.0rem
+  display: flex
+  justify-content: left
+
+.container-radio-done
+  padding-left: 3.9rem
+
+ 
+//radio button
+[type="radio"]:checked,
+[type="radio"]:not(:checked) 
+  position: absolute
+  left: -9999px
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+  position: relative
+  padding-left: 28px
+  cursor: pointer
+  line-height: 20px
+  display: inline-block
+  color: #666
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before 
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 1.6rem
+    height: 1.6rem
+    border: 0.1rem solid #ddd
+    border-radius: 100%
+    background: #fff
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after 
+  content: ''
+  width: 0.8rem
+  height: 0.8rem
+  background: $green
+  position: absolute
+  top: 0.5rem
+  left: 0.5rem
+  border-radius: 100%
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+[type="radio"]:checked.radio_warning + label:after,
+  background: $yellow
+
+[type="radio"]:not(:checked) + label:after 
+  opacity: 0
+  -webkit-transform: scale(0)
+  transform: scale(0)
+
+[type="radio"]:checked + label:after 
+  opacity: 1
+  -webkit-transform: scale(1)
+  transform: scale(1)

@@ -1,0 +1,66 @@
+.home
+  width: 100%
+  height: 100%
+  
+.overflow
+  position: relative
+  overflow: scroll 
+  overflow-x: hidden
+  height: 55rem
+  width: 100%
+
+.overflow:after
+  content: ""
+  height: 100px
+  position: absolute
+  bottom: 0
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 60%)
+ 
+.title-entreprise
+  padding-top: 2.0rem
+  font-family: Avenir
+  font-size: $ft_title
+  padding-bottom: 5.0rem
+
+.container-bloc-implantation
+  border-left: solid 0.2rem $main
+
+.container-bloc-rotation
+  border-left: solid 0.2rem $light_blue
+
+.container-bloc-doublons
+  border-left: solid 0.2rem $red
+
+.container-bloc
+  display: flex
+  border-bottom: 0.1rem solid $light_grey
+  align-items: center
+  justify-content: space-between
+  cursor: pointer
+
+li 
+  display: flex 
+  background: $white
+  color: $text 
+  line-height: 5rem 
+  text-decoration: none 
+  padding-left: 2.1rem 
+ 
+.chevron
+  display: flex
+  background-image: url('../../assets/pictos/chevron_blue.svg')
+  width: 0.7rem
+  height: 1.1rem
+  margin-right: 2.3rem
+
+.rotate 
+  -moz-transition: all .25s ease
+  -webkit-transition: all .25s ease
+  transition: all .25s linear
+
+.chevron.rotate.down 
+  -moz-transform: rotate(90deg)
+  -webkit-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+

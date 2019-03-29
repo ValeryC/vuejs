@@ -16,18 +16,21 @@ html, body
   margin: 0
   position: relative
   font-family: 'Avenir'
-  background: $light_blue
+  background: $white
+  scroll-behavior: smooth
 
 html
   font-size: 62.5%
+  font-weight: 500
 
 #app
-  position: relative
-  display: flex
   width: 100%
+  position: relative
   height: 100%
   font-size: $ft_main
   color: $main
+  main
+    height: 100%
   .vdatetime-popup__header
     background: #4d4f5c
   .vdatetime-popup__actions__button
@@ -56,6 +59,11 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: $ft_main
 
+h3
+  color: $dark_blue
+  font-size: $ft_title
+  font-weight: 500
+
 a
   color: $text
   display: block
@@ -67,9 +75,185 @@ a
   &:active
     color: $text
 
+.navigation-sidebar
+  color: $text
+  font-size: $ft_main
+  ul
+    padding: 0
+    display: flex
+    flex-direction: column
+    align-items: left
+    &:hover
+      cursor: pointer
+    li
+      display: flex
+      border-bottom: 1px solid $light_grey
+      transition: all 0.25s ease
+      line-height: 5rem
+      a
+        width: 100%
+        height: 100%
+        padding-left: 2rem
+        text-decoration: unset;
+        color: $text
+      &:hover
+        color: $white
+        background-color: $dark_blue
+        font-family: 'Avenir Black'
+        a
+          color: $white
+    li.active
+      color: $white
+      background-color: $dark_blue
+      font-family: 'Avenir Black'
+      a
+        color: $white
 
 /* USEFUL CLASSES */
 .light-blue
   background-color: $light_blue
 
+/* INPUTS */
+.input
+  position: relative
+  input[type="text"], input[type="number"]
+    background: $light_grey
+    color: $dark_blue
+    border-bottom: 2px solid $dark_blue
+    padding: 0 $ft_main
+    line-height: 4rem
+    height: 4rem
+    font-size: $ft_main
+    margin-bottom: 4rem
+  label
+    position: absolute
+    left: 0
+    top: -2rem
+    color: $dark_blue
+    font-size: $ft_main
 
+/* BTNS */
+.btn
+  border: 1px solid $dark_blue
+  border-radius: $radius
+  background: transparent
+  line-height: 4.8rem
+  height: 4.8rem
+  width: 13rem
+  text-align: center
+  &:hover
+    background: $dark_blue
+    color: $white
+    cursor: pointer
+
+/* LOADER EFFECTS */
+/* https://github.com/nguyenvanduocit/vue-loading-spinner */
+.spinner.spinner--rotate-square-2:after
+  background: $dark_blue !important
+
+/* SNOTIFY */
+.snotifyToast__inner
+  background: $white
+  border: 1px solid $dark_blue
+  border-bottom: 0
+  border-radius: $radius $radius 0 0
+
+.snotify-confirm
+  background: $white
+  .snotifyToast__inner
+    .snotifyToast__title
+      color: $dark_blue
+      font-size: $ft_title
+    .snotifyToast__body
+      color: $dark_blue
+      font-size: $ft_main
+
+  .snotifyToast__buttons
+    background: $dark_blue
+
+//Notification
+//Snotify import referentiel start
+.snotify-centerTop
+  border-radius: 0
+  .snotifyToast__progressBar
+    height: 3px
+  .snotifyToast__inner
+    min-height: 38px
+    background-color: $light_grey
+    border-bottom: 2px solid $dark_blue
+    padding: 0 20px
+    font-size: $ft_main
+    box-shadow: none
+    .picto-file
+      background-image: url('assets/pictos/file.png')
+      height: 3.2rem
+      width: 3.2rem
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      margin-right: 1rem
+    .snotify-body
+      font-weight: 500
+      display: flex
+      align-items: center
+      justify-content: space-between
+//Snotify import referentiel end
+
+// modal start
+// .modal-container
+//   position: absolute
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100vh
+//   .modal-background
+//     width: 100%
+//     height: 100%
+//     background-color: #707070
+//     z-index: 800
+//     opacity: 0.5
+//   .modal-content
+//     width: 100%
+//     height: 100%
+//     position: absolute
+//     top: 0
+//     left: 0
+//     display: flex
+//     .body
+//       height: 100%
+//       flex-direction: column
+//       margin: auto
+//       text-align: center
+//       z-index: 999
+//       border-radius: 4px
+//       width: 38rem
+//       height: 21rem
+//       color: $white
+//       background-color: $dark_blue
+//       .text
+//         font-size: $ft_modal
+//         margin-top: 5.5rem
+//         margin-bottom: 4rem
+//       .btn-container
+//         padding: 0 5rem
+//         display: flex
+//         justify-content: space-between
+// .btn-reverse
+//   z-index: 999
+//   border-radius: 4px
+//   padding: 1.6rem 5.4rem
+//   border: 1px solid $white
+//   opacity: 0.5
+  &:hover
+    opacity: 1
+    cursor: pointer
+
+.blurred
+  filter: blur(3px)
+//modal end
+
+
+.background-green
+  background-color: $green
+.background-yellow
+  background-color: $yellow

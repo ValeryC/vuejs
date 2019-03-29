@@ -1,0 +1,131 @@
+.navbar
+	width: 100%
+	//height: 100%
+	color: $text
+
+.top-navbar
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 70px
+
+.bottom-navbar
+	padding-top: 20px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 60px
+	border-bottom: 0.2rem solid $light_grey
+
+.logo-brand
+	background-image: url('../../assets/images/logo_and_name.svg')
+	height: 3rem
+	width: 7.8rem
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.profil
+	display: flex
+	justify-content: space-between
+	align-items: center
+	cursor: pointer
+	.avatar
+		border-radius: 50%
+		width: 3.8rem
+		height: 3.8rem
+		background-image: url('../../assets/images/Avatar.svg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		margin-left: 2rem
+	.name
+		font-size: $ft_main
+	.disconnect
+		position: absolute
+		display: flex
+		height: 9.0rem
+		width: 24rem
+		align-items: center
+		justify-content: center
+		background: $main
+		color: white
+		border-radius: 0.5rem 
+		top: 7.5rem
+		right: 5.5rem
+		z-index: 1
+	.disconnect:before
+		content: ""
+		width: 0
+		height: 0 
+		right: 1.0rem
+		bottom: 0
+		top: -1.0rem
+		position: absolute
+		border-left: 1.0rem solid transparent
+		border-right: 1.0rem solid transparent 	 	 
+		border-bottom: 1.0rem solid $main
+		
+	.container-disconnect
+		border: solid 0.1rem $white 
+		padding: 1.6rem 5.5rem
+		border-radius: 0.5rem 
+		cursor: pointer
+		color: $white
+
+.navigation
+	display: flex
+	align-items: center
+	height: 4rem
+	li
+		width: 9.5rem
+		margin-right: 1rem
+
+ul
+	padding: 0
+	margin: 0
+	height: 100%
+	display: flex
+	align-items: center
+	li
+		position: relative
+		display: flex
+		height: 100%
+		align-items: center
+		a
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+		&:hover
+			cursor: pointer
+	li.active
+		margin-top: 0.1rem
+		border-bottom: 0.2rem solid $dark_blue
+
+li
+	.text
+		display: flex
+		justify-content: space-around
+		align-items: center
+		height: 100%
+
+.pictos-container
+	display: flex
+	align-items: center
+	li
+		width: 4rem
+		height: 4rem
+	ul li.active
+		margin-top: 0.2rem
+	
+	.settings
+		background-image: url('../../assets/pictos/settings.svg')
+		background-repeat: no-repeat
+		background-position: center
+
+	.charts
+		background-image: url('../../assets/pictos/charts.svg')
+		background-repeat: no-repeat
+		background-position: center
