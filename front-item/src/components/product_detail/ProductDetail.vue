@@ -77,10 +77,10 @@ export default {
   
   data () {
     return {
-      addToCartLabel: 'Add to cart',
-      removeFromCartLabel: 'Remove from cart',
-      addToFavouriteLabel: 'Add to favourite',
-      removeFromFavouriteLabel: 'Remove from favourite',
+      addToCartLabel: 'Ajouter',
+      removeFromCartLabel: 'Retirer',
+      addToFavouriteLabel: 'Ajouter aux favoris',
+      removeFromFavouriteLabel: 'Retirer des favoris',
       product: {},
       selected: 1,
       quantityArray: []
