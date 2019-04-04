@@ -5,7 +5,7 @@
 npm install -g @vue/cli
 
 # clone repository
-git clone 
+https://github.com/ValeryC/vuejs.git
 
 # install dependencies
 npm install
