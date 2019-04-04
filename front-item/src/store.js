@@ -8,7 +8,7 @@ export default new Vuex.Store({
     products: [
       {
         id: 1,
-        title: 'Tomatoes',
+        title: 'Tomate',
         url: '/assets/tomate.jpg',
         description: 'La tomate colore les étals de nos marchés et nos assiettes tout au long de l’année. Elle se prête à une infinité de préparations. Très riche au niveau nutritionnel, elle a de véritables atouts bien-être. Toutes ses qualités en font le légume le plus consommé en France.',
         price: 2.40,
