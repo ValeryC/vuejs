@@ -8,112 +8,115 @@ export default new Vuex.Store({
     products: [
       {
         id: 1,
-        title: 'Product 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 50,
-        ratings: 3,
-        reviews: 5,
+        title: 'Tomatoes',
+        url: '/assets/tomate.jpg',
+        description: 'La tomate colore les étals de nos marchés et nos assiettes tout au long de l’année. Elle se prête à une infinité de préparations. Très riche au niveau nutritionnel, elle a de véritables atouts bien-être. Toutes ses qualités en font le légume le plus consommé en France.',
+        price: 2.40,
+        // ratings: 3,
+        // reviews: 5,
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 0
       },
       {
         id: 2,
-        title: 'Product 2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 35,
-        ratings: 5,
-        reviews: 10,
+        title: 'Salade',
+        url: '/assets/salade.jpeg',
+        description: 'La salade est une plante potagère dont on consomme les feuilles le plus souvent crues. De la saveur douce de la laitue en passant par le poivré naturel de la roquette ou l’amertume délicate de l’endive, les salades nous en font voir de toutes les saveurs !',
+        price: 0.60,
+        // ratings: 5,
+        // reviews: 10,
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 0
       },
       {
         id: 3,
-        title: 'Product 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 110,
-        ratings: 2,
-        reviews: 3,
+        title: 'Morille',
+        url: '/assets/morille.jpg',
+        description: 'Plaisir printanier exclusif, la morille sort du commun avec son chapeau alvéolé. Ce champignon sauvage embaume les plats avec un parfum unique, très subtil. Reconnue sur le plan gustatif, elle présente également de vrais arguments nutritionnels.',
+        price: 46.50,
+        // ratings: 2,
+        // reviews: 3,
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 0
       },
-      {
-        id: 4,
-        title: 'Product 4',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 50,
-        ratings: 1,
-        reviews: 0,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      },
-      {
-        id: 5,
-        title: 'Product 5',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 35,
-        ratings: 4,
-        reviews: 2,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      },
-      {
-        id: 6,
-        title: 'Product 6',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 110,
-        ratings: 5,
-        reviews: 1,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      },
-      {
-        id: 7,
-        title: 'Product 7',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 50,
-        ratings: 5,
-        reviews: 7,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      },
-      {
-        id: 8,
-        title: 'Product 8',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 35,
-        ratings: 3,
-        reviews: 0,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      },
-      {
-        id: 9,
-        title: 'Product 9',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        price: 110,
-        ratings: 4,
-        reviews: 2,
-        isAddedToCart: false,
-        isAddedBtn: false,
-        isFavourite: false,
-        quantity: 1
-      }
+      // {
+      //   id: 4,
+      //   title: 'Product 4',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 50,
+      //   ratings: 1,
+      //   reviews: 0,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // },
+      // {
+      //   id: 5,
+      //   title: 'Product 5',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 35,
+      //   ratings: 4,
+      //   reviews: 2,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // },
+      // {
+      //   id: 6,
+      //   title: 'Product 6',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 110,
+      //   ratings: 5,
+      //   reviews: 1,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // },
+      // {
+      //   id: 7,
+      //   title: 'Product 7',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 50,
+      //   ratings: 5,
+      //   reviews: 7,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // },
+      // {
+      //   id: 8,
+      //   title: 'Product 8',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 35,
+      //   ratings: 3,
+      //   reviews: 0,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // },
+      // {
+      //   id: 9,
+      //   title: 'Product 9',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      //   price: 110,
+      //   ratings: 4,
+      //   reviews: 2,
+      //   isAddedToCart: false,
+      //   isAddedBtn: false,
+      //   isFavourite: false,
+      //   quantity: 1
+      // }
     ],
     userInfo: {
       isLoggedIn: false,
@@ -244,4 +247,3 @@ export default new Vuex.Store({
 
   }
 });
-

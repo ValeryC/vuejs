@@ -11,7 +11,7 @@
 
 <script>
 import ProductsComponent from '../Products';
-import { getByTitle } from '../filters/filters';
+import { getByTitle } from '../../filters';
 
 export default {
   name: 'products-list-component',
@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       id: '',
-      noProductLabel: 'No product found',
+      noProductLabel: 'Produit introuvable',
       productsFiltered: []
     };
   },
@@ -52,6 +52,10 @@ export default {
 
 <style lang="scss" scoped>
   .card {
-    margin: 10px;
+    margin: 1.0rem;
+    border-radius: 0.8rem;
+  }
+  .columns.is-multiline{
+    margin-bottom: 1.0rem
   }
 </style>

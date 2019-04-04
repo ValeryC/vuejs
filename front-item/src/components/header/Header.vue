@@ -22,16 +22,8 @@
         
         <div class="navbar-end">
           <div class="navbar-item social">
-            <a href="#" class="icon" :title="facebookTooltip">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="icon" :title="twitterTooltip">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="icon" :title="instagramTooltip">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="icon" :title="linkedinTooltip">
+        
+            <a href="https://www.linkedin.com/in/chin-val%C3%A9ry/" class="icon" :title="linkedinTooltip">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
@@ -66,10 +58,7 @@
 
     data () {
       return {
-        linkedinTooltip: 'Follow us on Linkedin',
-        facebookTooltip: 'Follow us on Facebook',
-        twitterTooltip: 'Follow us on Twitter',
-        instagramTooltip: 'Follow us on Instagram',
+        linkedinTooltip: 'Follow me on Linkedin',
         isCheckoutActive: false,
         isMenuOpen: false
       }
@@ -96,11 +85,11 @@
 
 <style lang="scss" scoped>
   .title {
-    background: url('../../assets/images/vuemmerce-logo.png') no-repeat;
+    background: url('../../../public/assets/ms-icon-310x310.png') no-repeat;
     background-position: 50% 50%;
-    background-size: 165px;
-    width: 175px;
-    height: 35px;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
   }
   .shopping-cart {
     cursor: pointer;

@@ -10,7 +10,7 @@
 				<div v-if="!isCheckoutSection">
 					<div class="box" v-for="product in products" :key="product.id">
 						<button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
-						<p>{{ product.title }}  {{ product.quantity > 0 ?  ` - Quantity: ${product.quantity}` : ''}}</p>
+						<p>{{ product.title }}  {{ product.quantity > 0 ?  ` - Quantité: ${product.quantity}` : ''}}</p>
 						<p>{{ product.price }} &euro;</p>
 					</div>
 					<div v-if="products.length === 0">
@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<div v-if="isCheckoutSection">
-					<p>You bought it :-)</p>
+					<p>A bientôt :-)</p>
 				</div>
 			</section>
 			<footer class="modal-card-foot">
@@ -35,9 +35,9 @@ export default {
     
 	data () {
 		return {
-			modalTitle: 'Checkout',
-			removeLabel: 'Remove from cart',
-			cartEmptyLabel: 'Your cart is empty',
+			modalTitle: 'Panier',
+			removeLabel: 'Retirer du panier',
+			cartEmptyLabel: 'Votre panier est vide',
 			closeLabel: 'Close',
 			isCheckoutSection: false
 		}
@@ -74,11 +74,11 @@ export default {
 				finalPrice = pricesArray.reduce((a, b) => a + b, 0); // sum the prices
 				
 				if (totalProducts > 1) { // set plural or singular
-					productLabel = 'products';
+					productLabel = 'articles';
 				} else {
-					productLabel = 'product';
+					productLabel = 'article';
 				}
-				return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
+				return `${totalProducts} ${productLabel} à ${finalPrice}€`;
 		},
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;

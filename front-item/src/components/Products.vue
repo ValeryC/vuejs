@@ -2,7 +2,7 @@
   <div>
     <div class="card-image">
       <figure class="image is-4by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+       <img v-bind:src="product.url"/>
       </figure>
     </div>
     <div class="card-content">
@@ -29,7 +29,7 @@
           <i v-if="product.ratings === 5" class="fa fa-star"></i>
           <i v-if="product.ratings === 5" class="fa fa-star"></i>
           <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <p>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p>
+          <!-- <p>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p> -->
         </div>
         <p class="is-pulled-right">
           <span class="title is-4"><strong>&euro; {{ product.price }}</strong></span>
@@ -69,6 +69,7 @@
         params: {
           id: product.id,
           title: product.title,
+          url: product.url,
           price: product.price,
           rating: product.ratings,
           reviews: product.reviews,
@@ -87,11 +88,11 @@ export default {
   
   data () {
     return {
-      addToCartLabel: 'Add to cart',
-      viewDetailsLabel: 'Details',
-      removeFromCartLabel: 'Remove from cart',
-      addToFavouriteLabel: 'Add to favourite',
-      removeFromFavouriteLabel: 'Remove from favourite',
+      addToCartLabel: 'Ajouter',
+      viewDetailsLabel: 'Voir en details',
+      removeFromCartLabel: 'Retirer',
+      addToFavouriteLabel: 'Ajouter aux favoris',
+      removeFromFavouriteLabel: 'Retirer des favoris',
       selected: 1,
       quantityArray: []
     }
@@ -110,7 +111,14 @@ export default {
   computed: {
     isUserLogged () {
       return this.$store.getters.isUserLoggedIn;
-    }
+    },
+     setBackgroundImage: function() {
+    return { 'background-image': 'url("' + this.product.url + '")' };
+    /*
+     * or maybe this:
+     * return { 'background-image': 'url("' + this.image.url + '")' };
+     */
+  }
   },
 
   methods: {
@@ -175,6 +183,7 @@ export default {
    position: absolute;
    right: 15px;
  }
+
 </style>
 
 

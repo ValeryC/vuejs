@@ -87,8 +87,8 @@
             <div v-if="isUserSignedUp" class="level">
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="title">Welcome {{ name }}!</p>
-                  <p class="heading">Now you are a member</p>
+                  <p class="title">Bienvenue {{ name }}!</p>
+                  <p class="heading">Vous êtes un nouveau membre</p>
                 </div>
               </div>
             </div>
@@ -110,19 +110,19 @@ export default {
 
   data () {
     return {
-      modalTitle: 'Sign up',
-      modalTitleRegistered: 'Welcome ',
-      primaryBtnLabel: 'Sign up',
-      btnRegisteredLabel: 'Close',
-      namePlaceholder: 'Name*',
+      modalTitle: 'Inscription',
+      modalTitleRegistered: 'Bienvenue ',
+      primaryBtnLabel: 'Valider',
+      btnRegisteredLabel: 'Fermer',
+      namePlaceholder: 'Nom*',
       emailPlaceholder: 'Email*',
-      passwordPlaceholder: 'Password*',
-      repeatPasswordPlaceholder: 'Repeat Password*',
-      notEqualErrorLabel: 'Passwords must be equal',
-      passwordErrorLabel: 'Password required',
-      nameErrorLabel: 'Name required',
-      emailErrorLabel: 'Email required',
-      emailNotValidLabel: 'Valid email required',
+      passwordPlaceholder: 'Mot de passe*',
+      repeatPasswordPlaceholder: 'Repeter le mot de passe*',
+      notEqualErrorLabel: 'Le mot de passe doit être égal',
+      passwordErrorLabel: 'Mot de passe requis',
+      nameErrorLabel: 'Nom requis',
+      emailErrorLabel: 'Email requis',
+      emailNotValidLabel: 'Email Valide requis',
       name: '',
       email: '',
       password: '',

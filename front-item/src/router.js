@@ -1,56 +1,31 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './pages/Home/Home.vue'
-import Login from './pages/Login/Login.vue'
-import Settings from './pages/Settings/Settings.vue'
-import Charts from './pages/Charts/Charts.vue'
-import User from './pages/User/User.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Homepage from '../src/components/homepage/Homepage';
+import ProductDetail from '../src/components/product_detail/ProductDetail';
+import WishlistContainer from '../src/components/user/WishlistContainer';
 
 
-Vue.use(Router)
-
-
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  mode: 'history', // removes hashbang from url
   routes: [
+  
     {
       path: '/',
-      name: 'home',
-      component: Home,
-      onglet: 'generale'
+      name: 'homepage-component',
+      component: Homepage,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: User,
-      onglet: 'about'
+      path: '/product-detail/:id',
+      name: 'product-detail-component',
+      props: true,
+      component: ProductDetail,
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/settings',
-      name: 'settings',
-      component: Settings,
-      onglet: 'settings'
-    },
-    {
-      path: '/charts',
-      name: 'charts',
-      component: Charts,
-      onglet: 'charts'
-    },
-    
-  ]
-})
-function requireAuth(to, from, next) {
-  if (store.getters.getUserLogin) {
-    next()
-  } else {
-    next('/login')
-  }
-}
+      path: '/wishlist',
+      name: 'wishlist-container-component',
+      component: WishlistContainer,
+    }
+  ],
+});

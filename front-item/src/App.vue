@@ -1,47 +1,33 @@
 <template>
-  <div id="app">
-    <div class="container-grid">
-      <Grid></Grid>
-    </div>
-    <main :class="{ 'blurred': showModal, 'padding-grid': $route.name != 'login'}">
-      <navbar v-show="$route.name != 'login'"></navbar>
-      <vue-snotify></vue-snotify>
-      <router-view @showModal="toggleModal"/>
-    </main>
-     <!-- <modal @showModalInModal="toggleModal" v-if="showModal"></modal> -->
+  <div>
+    <header-component></header-component>
+    <router-view></router-view>
+    <footer-component></footer-component>
+    <login-modal-component></login-modal-component>
+    <registration-modal-component></registration-modal-component>
+    <checkout-modal-component></checkout-modal-component>
   </div>
 </template>
 
 <script>
-  import Grid from "@/components/grid/Grid.vue";
-  // import Modal from "@/components/modal/Modal.vue";
-  export default {
-    name: "app",
-    mounted() {
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import LoginModal from './components/modal/Login';
+import RegistrationModal from './components/modal/Registration';
+import CheckoutModal from './components/modal/Checkout';
 
-    },
-    methods: {
-
-    },
-    components: {
-      Grid,
-      //  Modal
-    },
-    data() {
-      return {
-        showModal: false
-      }
-    },
-    methods: {
-      toggleModal($event) {
-        this.showModal = $event
-      },
-    }
-  };
+export default {
+  name: 'app',
+  components: {
+    'header-component': Header,
+    'footer-component': Footer,
+    'login-modal-component': LoginModal,
+    'registration-modal-component': RegistrationModal,
+    'checkout-modal-component': CheckoutModal
+  }
+};
 </script>
 
-<style lang="scss">
-  @import "app.sass",
-    "@/components/grid/grid.sass",
-    "~vue-snotify/styles/material.css"
+<style lang="scss" src="./global-style.scss">
+
 </style>

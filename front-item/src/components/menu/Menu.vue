@@ -22,7 +22,7 @@
 		</div>
 		<div v-if="isUserLoggedIn" class="navbar-item has-dropdown is-hoverable">
 			<a class="navbar-link">
-			Welcome {{ getUserName }}
+			Bienvenue {{ getUserName }}
 			</a>
 			<div class="navbar-dropdown is-boxed">
 				<router-link class="navbar-item" :to="{ path: '/wishlist', name: 'wishlist-container-component' }">
@@ -42,10 +42,10 @@ export default {
 	name: 'menu-component',
 	data () {
 		return {
-			wishlistLabel: 'Wishlist',
-			logoutLabel: 'Log out',
-			loginLabel: 'Log in',
-			signupLabel: 'Sign up'
+			wishlistLabel: 'Favoris',
+			logoutLabel: 'Deconnexion',
+			loginLabel: 'Connectez-vous',
+			signupLabel: 'Inscrivez-vous'
 		}
 	},
 
