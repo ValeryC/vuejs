@@ -1,34 +1,14 @@
 <template>
   <div id="home" class="home">
     <div class="row">
-      <div class="col l3">
+      <div class="col l12">
         <div class="container-box">
-          <div class="title-entreprise">Entrepôt kenzo</div>
           <div class="overflow">
-            <div class="container-bloc-implantation">
-              <div class="container-bloc">
-                <li>Pré-implantation</li>
-                <div @click="toggle=!toggle" class="chevron rotate" :class="{'down': toggle}"></div>
-              </div>
-            </div>
-            <div class="container-bloc-rotation">
-              <div @click="rotate=!rotate" class="container-bloc">
-                <li>Rotation</li>
-                <div class="chevron rotate" :class="{'down': rotate}"></div>
-              </div>
-              <Missions v-show="rotate"></Missions>
-              <Missions v-show="rotate"></Missions>
-              <Missions v-show="rotate"></Missions>
-            </div>
-            <!-- v for -->
-            <div class="container-bloc-doublons">
-              <div class="container-bloc">
-                <li>Doublons</li>
-                <div @click="turn=!turn" class="chevron rotate" :class="{'down': turn}"></div>
-              </div>
-            </div>
+            <hero></hero>
+            <header-component></header-component>
+            <ShoppingCart></ShoppingCart>
+
           </div>
-  
         </div>
       </div>
     </div>
@@ -36,12 +16,17 @@
 </template>
 
 <script>
-  import Missions from "@/components/missions/Missions.vue";
+import Header from '@/components/header/Header';
+  import HeroSection from "@/components/hero/Hero.vue";
+  import ShoppingCart from "@/components/shoppingCart/ShoppingCart.vue";
   export default {
     name: "home",
     components: {
-      Missions
+        'header-component': Header,
+      'hero': HeroSection,
+      ShoppingCart
     },
+  
     methods: {},
     data() {
       return {

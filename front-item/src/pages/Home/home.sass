@@ -8,6 +8,7 @@
   overflow-x: hidden
   height: 55rem
   width: 100%
+  padding-top: 2%
 
 .overflow:after
   content: ""
@@ -15,12 +16,6 @@
   position: absolute
   bottom: 0
   background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 60%)
- 
-.title-entreprise
-  padding-top: 2.0rem
-  font-family: Avenir
-  font-size: $ft_title
-  padding-bottom: 5.0rem
 
 .container-bloc-implantation
   border-left: solid 0.2rem $main
@@ -63,4 +58,27 @@ li
   -webkit-transform: rotate(90deg)
   transform: rotate(90deg)
 
+* 
+  box-sizing: border-box
+ 
+.clearfix:after 
+  content: " "
+  visibility: hidden
+  display: block
+  height: 0
+  clear: both
+ 
+.container 
+  width: 100%
+  color: #4C5263
+  width: 100%
+  padding: 2em
 
+.products 
+  width: 75%
+  float: left
+
+.shopping-cart 
+  width: 25%
+  float: left
+ 

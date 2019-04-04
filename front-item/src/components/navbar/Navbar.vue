@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
     <div class="top-navbar">
-      <div class="logo-brand"></div>
+      <div class="title_user">Web Developer</div>
       <div @click="disconnect =!disconnect" class="profil">
-        <div class="name">Marie François</div>
+        <div class="name">CHIN Valéry</div>
         <div class="avatar"></div>
         <div class="disconnect" v-show="disconnect">
           <router-link to="/login">
@@ -17,31 +17,31 @@
     <div class="bottom-navbar">
       <div class="navigation">
         <ul>
-          <li :class="{'active': onglet == 'generale'}" @click="onglet = 'generale'">
+          <li :class="{'active': onglet == 'shopping'}" @click="onglet = 'shopping'">
             <router-link to="/">
-              <div class="text">Vue Générale</div>
+              <div class="text">Shopping</div>
             </router-link>
           </li>
-          <li :class="{'active': onglet == 'user-1'}" @click="onglet = 'user-1'">
-            <router-link :to="{name: 'user1'}">
-              <div class="text">Utilisateur 01</div>
+          <li :class="{'active': onglet == 'about'}" @click="onglet = 'about'">
+            <router-link :to="{name: 'about'}">
+              <div class="text">About me</div>
             </router-link>
           </li>
-          <li :class="{'active': onglet == 'user-2'}" @click="onglet = 'user-2'">
-            <router-link to="/">
-              <div class="text">Utilisateur 02</div>
-            </router-link>
-          </li>
-          <li :class="{'active': onglet == 'user-3'}" @click="onglet = 'user-3'">
-            <router-link to="/">
-              <div class="text">Utilisateur 03</div>
-            </router-link>
-          </li>
-          <li :class="{'active': onglet == 'user-4'}" @click="onglet = 'user-4'">
-            <router-link to="/">
-              <div class="text">Utilisateur 04</div>
-            </router-link>
-          </li>
+          <!-- <li :class="{'active': onglet == 'user-2'}" @click="onglet = 'user-2'"> -->
+          <!-- <router-link to="/"> -->
+          <!-- <div class="text">Utilisateur 02</div> -->
+          <!-- </router-link> -->
+          <!-- </li> -->
+          <!-- <li :class="{'active': onglet == 'user-3'}" @click="onglet = 'user-3'"> -->
+          <!-- <router-link to="/"> -->
+          <!-- <div class="text">Utilisateur 03</div> -->
+          <!-- </router-link> -->
+          <!-- </li> -->
+          <!-- <li :class="{'active': onglet == 'user-4'}" @click="onglet = 'user-4'"> -->
+          <!-- <router-link to="/"> -->
+          <!-- <div class="text">Utilisateur 04</div> -->
+          <!-- </router-link> -->
+          <!-- </li> -->
         </ul>
       </div>
       <div class="pictos-container">

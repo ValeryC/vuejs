@@ -8,13 +8,13 @@
       <vue-snotify></vue-snotify>
       <router-view @showModal="toggleModal"/>
     </main>
-     <modal @showModalInModal="toggleModal" v-if="showModal"></modal>
+     <!-- <modal @showModalInModal="toggleModal" v-if="showModal"></modal> -->
   </div>
 </template>
 
 <script>
   import Grid from "@/components/grid/Grid.vue";
-  import Modal from "@/components/modal/Modal.vue";
+  // import Modal from "@/components/modal/Modal.vue";
   export default {
     name: "app",
     mounted() {
@@ -24,7 +24,8 @@
 
     },
     components: {
-      Grid, Modal
+      Grid,
+      //  Modal
     },
     data() {
       return {

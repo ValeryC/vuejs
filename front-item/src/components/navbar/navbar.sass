@@ -7,23 +7,18 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
-	height: 70px
+	height: 9.0rem
 
 .bottom-navbar
-	padding-top: 20px
+	padding-top: 2.0rem
 	display: flex
 	align-items: center
 	justify-content: space-between
-	height: 60px
+	height: 6.0rem
 	border-bottom: 0.2rem solid $light_grey
 
-.logo-brand
-	background-image: url('../../assets/images/logo_and_name.svg')
-	height: 3rem
-	width: 7.8rem
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center
+.title_user
+	font-size: $ft_epic_txt
 
 .profil
 	display: flex
@@ -32,23 +27,23 @@
 	cursor: pointer
 	.avatar
 		border-radius: 50%
-		width: 3.8rem
-		height: 3.8rem
-		background-image: url('../../assets/images/Avatar.svg')
+		width: 6rem
+		height: 6rem
+		background-image: url('../../assets/images/Avatar.png')
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: center
 		margin-left: 2rem
 	.name
-		font-size: $ft_main
+		font-size: $ft_title
 	.disconnect
 		position: absolute
 		display: flex
-		height: 9.0rem
-		width: 24rem
+		height: 7.0rem
+		width: 20rem
 		align-items: center
 		justify-content: center
-		background: $main
+		background: $green
 		color: white
 		border-radius: 0.5rem 
 		top: 7.5rem
@@ -64,7 +59,7 @@
 		position: absolute
 		border-left: 1.0rem solid transparent
 		border-right: 1.0rem solid transparent 	 	 
-		border-bottom: 1.0rem solid $main
+		border-bottom: 1.0rem solid $green
 		
 	.container-disconnect
 		border: solid 0.1rem $white 
@@ -102,7 +97,7 @@ ul
 			cursor: pointer
 	li.active
 		margin-top: 0.1rem
-		border-bottom: 0.2rem solid $dark_blue
+		border-bottom: 0.2rem solid $grey
 
 li
 	.text

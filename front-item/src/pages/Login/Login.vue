@@ -20,7 +20,7 @@
                 </div>
                 <div class="input-line">
                   <input type="password" name="password" placeholder="Password" v-model="password" v-on:keyup.enter="onSubmit">
-                  <div class="picto-lock"></div>
+                  <div v-show="isPasswordValid()" class="picto-lock"></div>
                 </div>
               </div>
               <div class="action-buttons">
@@ -49,12 +49,23 @@
       return {
         email: null,
         regMail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
-        password: null
+        password: null,
+        word: /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})/
+        // must contains one digit from 0-9
+        // must contains one lowercase characters
+        // must contains at least one special character
+        // match anything with previous condition checking
+        // length at least 6 characters and maximum of 20 
+  
+  
       };
     },
     methods: {
+      isPasswordValid() {
+        return (this.password == "") ? false : (this.word.test(this.password)) ? false : true
+      },
       isEmailValid() {
-        return (this.email == "")? false : (this.regMail.test(this.email)) ? true : false
+        return (this.email == "") ? false : (this.regMail.test(this.email)) ? true : false
       },
       onSubmit() {
         // you should call API method to log user here
