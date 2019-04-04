@@ -5,7 +5,7 @@
 npm install -g @vue/cli
 
 # clone repository
-https://github.com/ValeryC/vuejs.git
+git clone https://github.com/ValeryC/vuejs.git
 
 # install dependencies
 npm install
@@ -20,5 +20,3 @@ npm run development
 npm run production
 
 ```
-
-_
